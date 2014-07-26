@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Finding Ferdinand</title>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  </head>
+  <body ng-controller = "OrderPalette">
+    <div class = "container">
+      <div class = "row">
+        <table id = 'regular-header'>
+          <tr>
+            <td><a class = "header-link" href="#">explore</a></td>
+            <td><a class = "header-link"  href="#">blog</a></td>
+            <td><img class = "logo-normal" src="assets/FF_logo_V2.png"></td>
+            <td><a class = "header-link" href="#">cart</a></td>
+            <td><a class = "header-link" href="#">login</a></td>
+          </td>
+        </table>
+      </div>
+    </div>
+
+    <div class = "palette-profile">
+      <div class = "row main-image">
+        <div class = "col-xs-12">
+          <img src = "assets/Palette-Open.jpg">
+          <div class = "container">
+            <div class = "row blurb">
+              <h1> INTRODUCING THE FF PALETTE </h1>
+              <h2> I WANT </h2> 
+              <select class = "form-control input-md quantity" ng-model = "qty" ng-init = "qty=0"> 
+                <option value = "" disabled selected = 'selected'> Qty </option>
+                <option value = 1> 1 </option>
+                <option value = 2> 2 </option>
+                <option value = 3> 3 </option>
+                <option value = 5> 5 </option>
+                <option value = 6> 6 </option>
+                <option value = 7> 7 </option>
+                <option value = 8> 8 </option>
+                <option value = 9> 9 </option>
+                <option value = 10> 10 </option>
+              </select>
+              <a ng-click = "paymentProcess = true" ng-disabled = 'qty==0' class = "btn" id = "start-button" href = "#payment"> GET YOUR PALETTE </a>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </div>
+
+    <div class = "container payment-form" ng-show = "paymentProcess==true" ng-init = "delivery = 'shipping'">
+      <div class = "row">
+        <div class = "col-xs-10 col-xs-offset-1">
+          <form novalidate role = "form" id = "payment" name = "payment">
+            <div class = "row form-row">
+              <div class = "col-xs-12">
+                <div class = "btn-group" data-toggle = "buttons">
+                  <label class="btn active" ng-click = "delivery = 'shipping'">
+                    <input type="radio" name="options" id="ship-to-me"> SHIP TO ME
+                  </label>
+                  <label class="btn" ng-click = "delivery = 'store'">
+                    <input type="radio" name="options" id="pick-up"> PICK UP IN STORE
+                  </label>
+                </div>
+              </div>
+              <div class = 'col-xs-12' ng-show = "delivery == 'shipping'">
+                <h2 class = "form-subtitle"> SHIPPING ADDRESS </h2>
+                <div class = "row form-row">
+                  <div class = "col-xs-2">
+                    <label> Full Name </label>
+                  </div>
+                  <div class = "col-xs-4">
+                    <input id = "full-name-shipping" ng-model = "user.nameShipping" placeholder = "First Last" type = "text" required name = "fullNameShipping" ng-class = "{error: payment.fullNameShipping.$error.required}" class = "form-control input-md">
+                  </div>
+                  <div class = "col-xs-2">
+                    <label> Street </label>
+                  </div>
+                  <div class = "col-xs-4">
+                    <input id = "street-shipping" name = "streetShipping" required ng-model = "user.streetShipping" placeholder = "123 Main Street" type = "text" ng-class= "{error: payment.streetShipping.$error.required}" class = "form-control input-md">
+                  </div>
+                </div>
+                <div class = "row form-row">
+                  <div class = "col-xs-2">
+                    <label> City </label>
+                  </div>
+                  <div class = "col-xs-4">
+                    <input id = "city-shipping" name = "cityShipping" required ng-model = "user.cityShipping" placeholder = "Smallville" type = "text" ng-class= "{error: payment.cityShipping.$error.required}" ng-model-options = "{updateOn: 'blur'}" class = "form-control input-md">
+                  </div>
+                  <div class = "col-xs-1">
+                    <label> State </label>
+                  </div>
+                  <div class = "col-xs-2">
+                    <select ng-model = "user.stateShipping" required name = "stateShipping" ng-class = "{error: payment.stateShipping.$error.required}" class = "form-control input-md state"></select>
+                  </div>
+                  <div class = "col-xs-1">
+                    <label> Zip </label>
+                  </div>
+                  <div class = "col-xs-2">
+                    <input id = "zip-shipping" name = "zipShipping" required ng-model = "user.zipShipping" placeholder = "12345" maxlength = "5" type = "text" ng-class= "{error: payment.zipShipping.$invalid && payment.zipShipping.$dirty || payment.zipShipping.$error.required}" ng-pattern = '/^[0-9]{5}$/' class = "form-control input-md">
+                  </div>
+                </div>
+              </div>
+              <div class = 'col-xs-12' ng-show = "delivery == 'store'">
+                <h2 class = "form-subtitle"> STORES NEAR YOU </h2>
+                <p> There are currently no stores near you. </p>
+              </div>
+            <div class = "col-xs-12">
+              <h2 class = "form-subtitle"> CREDIT CARD INFO </h2>
+            </div>
+            <div class = "col-xs-2">
+              <label> Full Name </label>
+            </div>
+            <div class = "col-xs-4">
+              <input id = "full_name" ng-model = "user.name" placeholder = "First Last" type = "text" required name = "fullName" ng-class = "{error: payment.fullName.$error.required}" class = "form-control input-md">
+            </div>
+            <div class = "col-xs-2">
+              <label> CC Number </label>
+            </div>
+            <div class = "col-xs-4">
+              <input id = "cc-number" name = "ccNumber" required ng-model = "user.ccNumber" placeholder = "" type = "text" ng-class= "{error: payment.ccNumber.$invalid && payment.ccNumber.$dirty || payment.ccNumber.$error.required}" ng-pattern = "/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/", class = "form-control input-md">
+            </div>
+          </div>
+          <div class = "row form-row">
+            <div class = "col-xs-2">
+              <label> Expiration </label>
+            </div>
+            <div class = "col-xs-2">
+              <select class = "input-md form-control" id = "expiration-month" ng-model = "user.expMonth" ng-options = "expmo for expmo in expirationMonths" required name = "expMonth">
+                <option value = ""> Month </option>
+              </select>
+            </div>
+            <div class = "col-xs-2">
+              <select class = "input-md form-control" id = "expiration-year" ng-model = "user.expYear" ng-options = "expyr for expyr in expirationYears" required name = "expYear">
+                <option value = ""> Year </option>
+              </select>
+            </div>
+            <div class = "col-xs-2">
+              <label> CVC </label>
+            </div>
+            <div class = "col-xs-4">
+              <input id = "cvc" name = "cvc" required ng-model = "user.cvc" placeholder = "3-4 digit number" type = "text" ng-class= "{error: payment.cvc.$invalid && payment.cvc.$dirty || payment.cvc.$error.required}" ng-pattern = "/^[0-9]{3,4}$/", class = "form-control input-md">
+            </div>
+          </div>
+          <h2 class = "form-subtitle"> BILLING ADDRESS </h2>
+          <div class = "row form-row">
+            <div class = "col-xs-2">
+              <label> Street </label>
+            </div>
+            <div class = "col-xs-4">
+              <input id = "street" name = "street" required ng-model = "user.street" placeholder = "123 Main Street" type = "text" ng-class= "{error: payment.street.$error.required}" class = "form-control input-md">
+            </div>
+            <div class = "col-xs-2">
+              <label> City </label>
+            </div>
+            <div class = "col-xs-4">
+              <input id = "city" name = "city" required ng-model = "user.city" placeholder = "Smallville" type = "text" ng-class= "{error: payment.city.$error.required}" ng-model-options = "{updateOn: 'blur'}" class = "form-control input-md">
+            </div>
+          </div>
+          <div class = "row form-row">
+            <div class = "col-xs-2">
+              <label> State </label>
+            </div>
+            <div class = "col-xs-4">
+              <select ng-model = "user.state" required name = "state" ng-class = "{error: payment.state.$error.required}" class = "form-control input-md state"></select>
+            </div>
+            <div class = "col-xs-2">
+              <label> Zip </label>
+            </div>
+            <div class = "col-xs-4">
+              <input id = "zip" name = "zip" required ng-model = "user.zip" placeholder = "12345" maxlength = "5" type = "text" ng-class= "{error: payment.zip.$invalid && payment.zip.$dirty || payment.zip.$error.required}" ng-pattern = '/^[0-9]{5}$/' class = "form-control input-md">
+            </div>
+          </div>
+
+          <!-- validation messages -->
+          <div class = "row form-row">
+            <div class = "col-xs-12">
+              <div class = "help-block" ng-show = "payment.fullName.$error.required || payment.ccNumber.$error.required || payment.cvc.$error.required || payment.street.$error.required || payment.city.$error.required || payment.state.$error.required || payment.zip.$error.required || payment.fullNameShipping.$error.required || payment.streetShipping.$error.required || payment.cityShipping.$error.required || payment.stateShipping.$error.required || payment.zipShipping.$error.required"> All highlighted fields are required! </div>
+
+
+              <div class = "help-block" ng-show = "payment.ccNumber.$invalid && payment.ccNumber.$dirty"> Please enter a valid credit card number </div>
+              <div class = "help-block" ng-show = "payment.cvc.$invalid && payment.cvc.$dirty"> Please enter a valid CVC </div>
+              <div class = "help-block" ng-show = "payment.zip.$invalid && payment.zip.$dirty"> Please enter a valid billing zip code</div>
+              <div class = "help-block" ng-show = "payment.zipShipping.$invalid && payment.zipShipping.$dirty"> Please enter a valid shipping zip code</div>
+            </div>
+          </div>
+          <div class = "row">
+            <div class = "col-xs-12">
+              <a class = "btn" id = "start-button"> GET YOUR PALETTE </a>
+            </div>
+          </div>
+        </form>
+
+
+        </div>
+      </div>
+    </div>
+
+
+  
+
+    <div class = "container footer hidden-xs">
+      <div class = "row">
+        <ul class = "nav pull-left">
+          <li><a href="#">find us</a></li>
+          <li><a href="#">product info</a></li>
+          <li><a href="#">careers</a></li>
+          <li><a href="#">terms of service</a></li>
+          <li><a href="#">privacy policy</a></li>
+        </ul>
+        <ul class = "nav social pull-right">
+          <li><a href="http://www.facebook.com"><img src="assets/facebook.png"></a></li>
+          <li><a href="#"><img src="assets/pinterest.png"> </a></li>
+          <li><a href="#"><img src="assets/instagram.png"> </a></li>
+          <li><a href="#"><img src="assets/twitter.png"> </a></li>
+          <li><a href="#"><img src="assets/tumblr.png"> </a></li>
+          <li><a href="#"><img src="assets/youtube.png"> </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class = "container footer visible-xs">
+      <div class = "row">
+        <table class = "nav">
+          <tr>
+            <td><a href="#">find us</a></td>
+            <td><a href="#">product info</a></td>
+            <td><a href="#">careers</a></td>
+            <td><a href="#">terms of service</a></td>
+            <td><a href="#">privacy policy</a></td>
+          </tr>
+        </table>
+        <table class = "nav social">
+          <tr>
+            <td><a href="http://www.facebook.com"><img src="assets/facebook.png"></a></td>
+            <td><a href="#"><img src="assets/pinterest.png"> </a></td>
+            <td><a href="#"><img src="assets/instagram.png"> </a></td>
+            <td><a href="#"><img src="assets/twitter.png"> </a></td>
+            <td><a href="#"><img src="assets/tumblr.png"> </a></td>
+            <td><a href="#"><img src="assets/youtube.png"> </a></td>
+          </td>
+        </table>
+      </div>
+    </div>
+
+
+  </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+<script src="script.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</html>

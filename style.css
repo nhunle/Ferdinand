@@ -1,0 +1,512 @@
+/*------------------------------*/
+/*general*/
+
+.btn{
+	border-radius: 0 !important;
+	border: none !important;
+}
+
+.btn:hover{
+	background-color: #66D6DB !important;
+}
+
+.active{
+	background: #63CFD4;
+	padding: 7px 10px;
+	color: white !important;
+}
+
+.error{
+	color: red;
+	border: 1px solid #66D6DB !important;
+}
+
+.form-subtitle{
+	font-family: 'Oswald', sans-serif;
+	color: #63CFD4;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.input-md{
+	margin: 5px 0;
+}
+
+form#payment label{
+	font-size: 14px;
+	font-weight: 300;
+	padding-top: 10px;
+}
+
+/*------------------------------*/
+/* regular header */
+
+table#regular-header{
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+table#regular-header td{
+	padding: 0 50px;
+	vertical-align: middle;
+	font-size: 20px;
+}
+
+table#regular-header td a.header-link{
+	color: rgb(51, 51, 51);
+	font-weight: 100;
+}
+
+table#regular-header td a.header-link:hover{
+	text-decoration: none;
+	color: #63CFD4;
+}
+
+.logo-normal{
+	position: block;
+	width: 200px;
+}	
+
+
+/*------------------------------*/
+/* home styling */
+
+/*hero styling*/
+
+#start-button{
+    padding: 10px;
+	font-size: 36px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	background-color: #63CFD4;
+	color: white;
+}
+
+.hero{
+	height: 630px;
+	overflow: hidden;
+	position: relative;
+}
+
+.beauty-shot{
+	width: 100%;
+	position: absolute;
+}
+.logo{
+	position: relative;
+	width: 29%;
+	top: 80px;
+	left: 35%;
+}
+
+.tagline{
+	text-align: center;
+	margin-top: 30px;
+}
+
+.tagline h1{
+	font-size: 24px;
+	font-weight: 100;
+	margin-bottom: 40px;
+	color: white;
+}
+
+.navigation{
+	background-color: rgba(255, 255, 255, 0.5);
+	margin-top: 20px;
+}
+
+.nav.nav-pills{
+	font-size: 20px;
+	font-weight: 200;
+}
+
+.nav.nav-pills li{
+	margin: 0 40px;
+}
+
+.nav.nav-pills a{
+	color: rgb(85, 85, 85);
+	border-radius: 0;
+	padding: 8px 12px;
+}
+
+.nav.nav-pills a:hover{
+	color: #63CFD4;
+	background: white;
+}
+
+/*how it works styling*/
+
+.how-it-works h1{
+	font-size: 48px;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.how-it-works-title{
+	margin-bottom: 30px;
+}
+
+.how-it-works img{
+	width: 100%;
+}
+
+.photo{
+	overflow: hidden;
+	height: 300px;
+}
+
+.mix .description{
+	text-align: left;
+}
+
+.description{
+	text-align: right;
+	font-size: 24px;
+	font-weight: 100;
+	background-color: white;
+	border: 2px solid #63CFD4;
+	position: relative;
+	height: 300px;
+	margin-bottom: 50px;
+	line-height: 1.2em;
+}
+
+.description p{
+	position: absolute;
+	bottom: 0;
+	padding: 30px;
+}
+
+.start-bottom{
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+/*footer styling*/
+
+.footer{
+	border-top: 1px rgb(51, 51, 51) solid;
+	margin-bottom: 20px;
+}
+
+.footer .nav.social{
+	margin: 8px 0;
+}
+
+.footer .nav li{
+	float: left;
+} 
+
+.footer .nav a{
+	color: rgb(51, 51, 51);
+	font-weight: 200;
+	font-size: 14px;
+}
+
+.footer .nav a:hover{
+	color: #63CFD4;
+	background-color: transparent;
+}
+
+.footer .nav img{
+	width: 30px;
+}
+
+.footer .nav.social a{
+	padding: 0;
+	margin: 0 5px;
+}
+
+/*------------------------------*/
+/* explore styling */
+
+.discovery-welcome{
+	margin: 20px 0;
+}
+
+.discovery-welcome h1{
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	text-align: center;
+	font-size: 30px;
+}
+
+a#make-your-own{
+	color: #63CFD4;
+}
+
+a#make-your-own:hover{
+	text-decoration: none;
+	color: #66D6DB;
+}
+
+a#get-yours{
+	color: white;
+	background: #63CFD4;
+	padding: 5px 7px;
+}
+
+a#get-yours:hover{
+	text-decoration: none;
+	background: #66D6DB;
+}
+
+.filters label{
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	text-align: left;
+	font-size: 22px;
+}
+
+.btn.filter-option{
+	margin: -5px 5px 5px 5px;
+	color: rgb(51, 51, 51);
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 100;
+}
+
+.btn.filter-option:hover{
+	color: white;
+}
+
+.btn.filter-option.active{
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.popular-filters{
+	margin-top: 30px;
+}
+
+.add-own-filters .input-md{
+	height: 40px;
+	max-width: 410px;
+	display: inline;
+}
+
+.add-own-filters{
+	margin: 10px 0;
+}
+
+.btn.inline{
+	background: #63CFD4;
+	color: white;
+	height: 38px;
+}
+
+.btn.inline:hover{
+	background: #66D6DB;
+	color: white;
+}
+
+.recipe-container{
+	margin-top: 40px;
+}
+
+.recipe-row{
+	margin: 30px 0;
+	/*position: relative;*/
+}
+
+.recipe-card{
+	position: relative;
+	margin: 30px 0;
+}
+
+.single-recipe{
+	position: relative;
+}
+
+.single-recipe img{
+	width: 100%;
+	height: 100%;
+}
+
+.single-recipe-info{
+	position: absolute !important;
+	top: 0;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 30px 45px !important;
+	height: 100%;
+	opacity: 0;
+	-webkit-transition-property:opacity;
+	-webkit-transition-duration:150ms;
+	-webkit-transition-timing-function:linear;
+	-webkit-transition-delay:150ms;
+}
+
+.single-recipe-info:hover{
+	opacity: 1;
+}
+
+.single-recipe-info-content{
+	position: absolute;
+	bottom: 50px;
+	width: 100%;
+}
+
+.single-recipe-info-content h3{
+	font-weight: 100;
+	font-size: 40px;
+	margin: 0;
+}
+.single-recipe-info-content p{
+	font-weight: 100;
+	font-size: 24px;
+}
+.single-recipe-info-content table{
+	margin-top: 20px;
+	font-weight: 100;
+	width: 100%;
+}
+
+.recipe-actions td img.fb-like{
+	width: 55px;
+}
+
+.recipe-actions td .btn{
+	background: #63CFD4;
+	color: white;
+	font-size: 22px;
+	font-weight: 100;
+}
+
+.recipe-actions td .btn:hover{
+	background: #66D6DB;
+}
+
+/*------------------------------*/
+/* palette profile */
+
+.palette-profile{
+	margin-top: 60px;
+}
+
+.main-image{
+	height: 800px;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+.palette-profile img{
+	width: 100%;
+	position: relative;
+}
+
+.palette-profile .blurb{
+	position: absolute;
+	top: 150px;
+	left: 30%;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+}
+
+.palette-profile .blurb h1{
+	font-size: 44px;
+}
+
+.palette-profile #start-button{
+	margin-top: 20px;
+	width: 100%;
+}
+
+.palette-profile .quantity{
+	width: 200px;
+	margin: 0 auto;
+}
+
+form a#start-button{
+	width: 100%;
+	margin: 20px 0;
+}
+
+.btn-group .btn{
+	font-family: 'Oswald', sans-serif;
+	color: #63CFD4;
+	border: 1px solid #63CFD4 !important;
+}
+
+.btn-group .btn:hover{
+	color: white;
+}
+
+.btn-group .btn.active{
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.btn-group{
+	width: 100%;
+}
+
+/*------------------------------*/
+/* responsiveness */
+
+@media (max-width: 992px) {
+  .hero{
+	height: 550px;
+  }
+  .description{
+	font-size: 19px;
+  }
+}
+
+@media (max-width: 768px) { 
+	.hero{
+		height: 400px;
+	}
+	.tagline{
+		margin-top: 30px;
+	} 
+	.tagline h1{
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	.how-it-works h1{
+		font-size: 32px;
+	}
+	#start-button{
+		font-size: 18px;
+	}
+	.nav.nav-pills{
+		font-size: 14px;
+	}
+	.description{
+		margin-top: 10px;
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+	.navigation{
+		margin-top: 5px;
+	}
+	.nav.nav-pills li{
+		margin: 0 20px;
+	}
+	.photo{
+		overflow: hidden;
+		height: 200px;
+	}
+	.footer table td{
+		padding: 0 5px;
+	}
+	.footer table.nav{
+		width: 400px;
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+	.footer table.nav.social{
+		width: 250px;
+		margin: 10px auto;
+	}
+	.start-bottom{
+		margin-bottom: 30px;
+	}
+}
