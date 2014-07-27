@@ -80,10 +80,12 @@
             </div>
           </div>
           <div class="col-xs-4 add-own-filters">
-            <label> ADD YOUR OWN </label> 
+            <label>
+              ADD YOUR OWN
+            </label> 
           </div>
           <div class="col-xs-8 add-own-filters">
-            <input class="form-control input-md" placeholder="e.g. red, unique, Emma Watson"> </input>
+            <input class="form-control input-md" placeholder="e.g. red, unique, Emma Watson" data-action="search"> </input>
             <button class="btn inline"> &nbsp; + &nbsp; </button> 
           </div>
 
@@ -91,7 +93,9 @@
       </div>
     </div>
 
-    <div class="container recipe-container" id="recipe-container">
+    <div class="container recipe-container">
+      <div id="recipe-container" class="row">
+      </div>
     </div>
   </div>
 
@@ -147,7 +151,9 @@
     baseUrl: "/static",
     waitSeconds: 60,
     paths: {
-      'text': 'lib/requirejs-text/text'
+      'text': 'lib/requirejs-text/text',
+      'jquery': 'lib/jquery/js/jquery.min',
+      'underscore': 'lib/underscore/js/underscore-min'
     }
   }
 </script>

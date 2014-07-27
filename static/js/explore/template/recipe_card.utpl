@@ -1,11 +1,11 @@
-<div class="recipe-card">
+<div class="recipe-card col-xs-4">
   <div class='single-recipe'>
-    <img src="<%= model.src %>">
+    <img src="<%= src %>">
   </div>
   <div class='col-xs-12 single-recipe-info'>
     <div class="single-recipe-info-content">
-      <h3> emily blunt's day-to-night bubblegum </h3>
-      <p> finding ferdinand editors </p>
+      <h3><%= title %></h3>
+      <p><%= creator %></p>
       <table class="recipe-actions">
         <tr>
           <td> <img src="/static/img/heart.png"> 22 </td>

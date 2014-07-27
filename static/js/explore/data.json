@@ -3,28 +3,70 @@
     "src": "/static/media/hailees.jpg",
     "title": "Radiant Orchid",
     "creator": "Nhu Le",
-    "tag": ["purple", "emma watson", "red"],
+    "tags": ["purple", "emma watson", "red"],
+    "category": "spring"
+  },
+  {
+    "src": "/static/media/hailees.jpg",
+    "title": "Radiant Orchid",
+    "creator": "Nhu Le",
+    "tags": ["purple", "emma watson", "red"],
+    "category": "spring"
+  },
+  {
+    "src": "/static/media/hailees.jpg",
+    "title": "Radiant Orchid",
+    "creator": "Nhu Le",
+    "tags": ["purple", "emma watson", "red"],
+    "category": "spring"
+  },
+  {
+    "src": "/static/media/hailees.jpg",
+    "title": "Radiant Orchid",
+    "creator": "Nhu Le",
+    "tags": ["purple", "emma watson", "red"],
     "category": "spring"
   },
   {
     "src": "/static/media/emma_stone.jpg",
     "title": "Emma Stone",
     "creator": "Nhu Le",
-    "tag": ["purple", "fruit", "water"],
+    "tags": ["green", "fruit", "water"],
+    "category": "Fall"
+  },
+  {
+    "src": "/static/media/hailees.jpg",
+    "title": "Radiant Orchid",
+    "creator": "Nhu Le",
+    "tags": ["pink", "emma watson", "water"],
+    "category": "spring"
+  },
+  {
+    "src": "/static/media/hailees.jpg",
+    "title": "Radiant Orchid",
+    "creator": "Ashwin",
+    "tags": ["purple", "emma watson", "water"],
+    "category": "spring"
+  },
+    {
+    "src": "/static/media/hailees.jpg",
+    "title": "Radiant Orchid",
+    "creator": "Nhu Le",
+    "tags": ["purple", "emma watson", "red"],
     "category": "spring"
   },
   {
     "src": "/static/media/hailees.jpg",
     "title": "Radiant Orchid",
     "creator": "Nhu Le",
-    "tag": ["purple", "emma watson", "water"],
+    "tags": ["purple", "emma watson", "red"],
     "category": "spring"
   },
   {
     "src": "/static/media/hailees.jpg",
     "title": "Radiant Orchid",
     "creator": "Nhu Le",
-    "tag": ["purple", "emma watson", "water"],
+    "tags": ["purple", "emma watson", "red"],
     "category": "spring"
   }
 ]
