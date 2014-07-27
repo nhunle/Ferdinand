@@ -140,11 +140,21 @@
   </div>
 
 </body>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
 <!-- Please call pinit.js only once per page -->
-<script type="text/javascript" async src="http://assets.pinterest.com/js/pinit.js"></script> 
-<script src="/static/js/base.js"></script>
+<script>
+  require = {
+    baseUrl: "/static",
+    waitSeconds: 60,
+    paths: {
+      'text': 'lib/requirejs-text/text'
+    }
+  }
+</script>
+
+<script 
+  data-main="/static/js/explore/page.js"
+  src="/static/lib/require/js/require.js">
+</script>
 
 </html>
