@@ -1,0 +1,19 @@
+<div class="recipe-card">
+  <div class='single-recipe'>
+    <img src="<%= model.src %>">
+  </div>
+  <div class='col-xs-12 single-recipe-info'>
+    <div class="single-recipe-info-content">
+      <h3> emily blunt's day-to-night bubblegum </h3>
+      <p> finding ferdinand editors </p>
+      <table class="recipe-actions">
+        <tr>
+          <td> <img src="/static/img/heart.png"> 22 </td>
+          <td> <a href="http://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-color="white"><img src="http://assets.pinterest.com/images/pidgets/pinit_fg_en_rect_white_20.png" /></a> &nbsp; 22</td>
+          <td> <img src="/static/img/fb_like.png" class="fb-like"> 25 </td>
+          <td> <button class="btn"> see recipe </button> </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
